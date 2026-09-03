@@ -26,6 +26,8 @@ void ofApp::setup(){
 	//	std::string loadModel(const std::string& aTag, const std::string& modelsRoot, const std::string& modelUrl );
 	bool bUseRtmo = false;
 	
+	// NOTE: The load model function will download the models from the provided urls if not present on the file system.
+	// the download time can vary depending on the model being downloaded and internet bandwidth.
 	if( bUseRtmo ) {
 		
 		rsettings.poseModelPath = ofxRtmModelLoader::loadModel("rtmo",
